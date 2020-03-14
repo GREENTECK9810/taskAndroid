@@ -21,4 +21,9 @@
         <item name="android:fontFamily">@font/segoeui</item>
     </style>
 
+    <style name="editText" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">#008488</item>
+        <item name="colorControlNormal">#EBEBEB</item>
+    </style>
+
 </resources>
