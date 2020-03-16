@@ -31,7 +31,8 @@
             android:layout_marginRight="22dp"
             android:theme="@style/editText"
             android:textAppearance="@style/regular_text"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:textColor="@color/blue"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -52,7 +53,8 @@
             android:layout_marginRight="22dp"
             android:theme="@style/editText"
             android:textAppearance="@style/regular_text"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:textColor="@color/blue"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -73,7 +75,9 @@
             android:layout_marginRight="22dp"
             android:theme="@style/editText"
             android:textAppearance="@style/regular_text"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:inputType="textPassword"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -94,7 +98,9 @@
             android:layout_marginRight="22dp"
             android:theme="@style/editText"
             android:textAppearance="@style/regular_text"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:inputType="number"
+            android:textColor="@color/blue"/>
 
         <Button
             android:layout_width="match_parent"
