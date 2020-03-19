@@ -28,9 +28,10 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_arrow_back_black_24dp" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_event_note_24px" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\visha\Downloads\icons8-google.svg" />
+                            <entry key="sourceFile" value="C:\Users\visha\Desktop\taskapp\event_note-24px.svg" />
                           </map>
                         </option>
                       </PersistentState>

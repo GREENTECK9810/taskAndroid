@@ -63,17 +63,19 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="283dp"
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/darkgrey"
-        android:layout_gravity = "start">
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Drawer"/>
-    </LinearLayout>
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu"
+        app:itemTextAppearance="@style/bold_text"
+        app:itemTextColor="@color/navtextcolor"
+        app:itemIconTint="@color/navtextcolor"
+        app:headerLayout="@layout/nav_header"
+        >
+
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

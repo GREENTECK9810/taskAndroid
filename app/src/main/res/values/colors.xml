@@ -9,4 +9,5 @@
     <color name="blue">#008488</color>
     <color name="blackborder">#707070</color>
     <color name="lightgrey">#EBEBEB</color>
+    <color name="navtextcolor">#888888</color>
 </resources>
