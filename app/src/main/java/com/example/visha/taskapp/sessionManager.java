@@ -5,26 +5,29 @@ import android.content.SharedPreferences;
 
 public class sessionManager {
 
-    String token;
+    private String token;
     Context _context;
-    String TEXT = "MySharedPref";
+    private static final String name = "MySharedPref";
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+    int PRIVATE_MODE = 0;
 
     sessionManager(Context _context){
-        this._context = _context.getApplicationContext();
+        this._context = _context;
+        sharedPreferences = _context.getSharedPreferences(this.name,PRIVATE_MODE);
+        editor = sharedPreferences.edit();
     }
 
     public void StoreData(String token){
-        SharedPreferences sharedPreferences = _context.getSharedPreferences(this.TEXT,_context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putString("token", token);
+        editor.commit();
 
     }
 
     public String getData(){
-        SharedPreferences sharedPreferences = _context.getSharedPreferences(this.TEXT,_context.MODE_PRIVATE);
 
-        this.token = sharedPreferences.getString("token","");
+        this.token = sharedPreferences.getString("token", null);
 
         return token;
     }

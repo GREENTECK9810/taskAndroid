@@ -30,6 +30,8 @@ public class login extends Fragment {
     EditText email;
     EditText password;
     private taskManagerApi taskapi;
+    private String token;
+    sessionManager sm;
 
     public login() {
         // Required empty public constructor
@@ -45,6 +47,7 @@ public class login extends Fragment {
         loginButton = (Button) mView.findViewById(R.id.fragment_login_button);
         email = (EditText) mView.findViewById(R.id.email);
         password = (EditText) mView.findViewById(R.id.password);
+        sm = new sessionManager(getActivity().getApplicationContext());
 
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -90,9 +93,12 @@ public class login extends Fragment {
                 }
 
                 //store token in sharedpref if response is successfull
-                sessionManager sm = new sessionManager(getActivity());
-                sm.StoreData(response.body().getToken());
-                Toast.makeText(getActivity().getApplicationContext(),response.body().getToken(),Toast.LENGTH_SHORT).show();
+                token = response.body().getToken();
+                sm.StoreData(token);
+                Toast.makeText(getActivity().getApplicationContext(),"login successfull",Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getActivity().getApplicationContext(),HomePage.class);
+                startActivity(intent);
 
             }
 

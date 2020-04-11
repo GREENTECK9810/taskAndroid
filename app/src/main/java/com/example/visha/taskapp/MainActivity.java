@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button login_button;
     private TextView sign_up;
+    sessionManager sm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         login_button = (Button) findViewById(R.id.login_button);
         sign_up = (TextView) findViewById(R.id.sign_up);
+        sm = new sessionManager(getApplicationContext());
+
+        isUserLogin();
 
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 v.getContext().startActivity(intent);
             }
         });
+
+    }
+
+    private void isUserLogin() {
+
+        if(sm.getData() != null){
+            Intent intent = new Intent(getApplicationContext(), HomePage.class);
+            startActivity(intent);
+        }
 
     }
 
