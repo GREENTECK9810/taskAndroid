@@ -31,4 +31,9 @@ public class sessionManager {
 
         return token;
     }
+
+    public void deleteData(){
+        editor.putString("token", null);
+        editor.commit();
+    }
 }

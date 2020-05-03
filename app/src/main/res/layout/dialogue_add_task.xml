@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            android:layout_gravity="right|top"
+            android:tint="@color/darkgrey"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/bold_text"
+                android:text="New Task"
+                android:textSize="20dp"
+                android:textColor="@color/darkgrey"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/tasktextbox"
+                android:layout_marginTop="20dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:hint="Write task here"
+                android:textAppearance="@style/regular_text"
+                android:textSize="14dp"
+                android:background="@drawable/add_task_edittext"
+                android:textColor="@color/darkgrey"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/addbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/add_task_button_shape"
+                    android:textAppearance="@style/bold_text"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:text="Add Task"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/imagebackgroundloading"
+                    app:srcCompat="@drawable/loadingcircle"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    />
+
+            </RelativeLayout>
+            
+
+
+
+        </LinearLayout>
+        
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

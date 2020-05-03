@@ -6,7 +6,7 @@ public class User {
     private String name;
     private String email;
     private String password;
-    private int age;
+    private Integer age;
 
     public User(String email, String password) {
         this.email = email;
@@ -23,5 +23,13 @@ public class User {
 
     public int getAge() {
         return age;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

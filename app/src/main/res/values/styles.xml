@@ -26,4 +26,16 @@
         <item name="colorControlNormal">#EBEBEB</item>
     </style>
 
+    <style name="collapsingBarTitleExpanded">
+        <item name="android:fontFamily">@font/segoeuibold</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="collapsingBarTitleCollapsed">
+        <item name="android:fontFamily">@font/segoeuibold</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
 </resources>

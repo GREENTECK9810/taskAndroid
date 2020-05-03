@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tasksPage">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/collapsingToolbar"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Thursday, 10th"
+            app:contentScrim="@color/white"
+            app:expandedTitleMarginStart="36dp"
+            app:expandedTitleMarginBottom="43dp"
+            app:collapsedTitleTextAppearance="@style/collapsingBarTitleCollapsed"
+            app:expandedTitleTextAppearance="@style/collapsingBarTitleExpanded">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+
+            <TextView
+                android:id="@+id/taskcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/bold_text"
+                android:text="Tasks"
+                android:textColor="@color/darkgrey"
+                android:textSize="18sp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="43dp"
+                app:layout_collapseMode="none"/>
+
+            <TextView
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/regular_text"
+                android:text="December"
+                android:textColor="@color/darkgrey"
+                android:textSize="18sp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="15dp"
+                app:layout_collapseMode="parallax"/>
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgrey"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink"
+        android:src="@drawable/ic_add_black_24dp"
+        android:tint="@color/white"
+        android:stateListAnimator="@null"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginEnd="32dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:visibility="gone"
+        android:indeterminateTint="@color/darkgrey"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
